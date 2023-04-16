@@ -1,0 +1,74 @@
+#app {
+  
+    transition: all 0.5s;
+    z-index: 997;
+    padding-left: 0px;
+    max-width: 100vw; 
+    max-height: 100vh;
+    padding: 0;
+
+  }
+  
+  #app.header-scrolled,
+  #app.header-inner-pages {
+    background: rgba(0, 0, 0, 0.8);
+  }
+ 
+  #app .logo {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  #app .logo a {
+    color: #fff;
+  }
+  
+  #app .logo a span {
+    color: #ffc451;
+  }
+  
+  #app ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  #app li {
+    list-style: none;
+    position: relative;
+  }
+  
+  #app a,
+  #app a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  
+  #app a i,
+   #app a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  
+  #app a:hover,
+  #app .active,
+  #app .active:focus,
+  #app li:hover>a {
+    color: #ffc451;
+  }
+  
