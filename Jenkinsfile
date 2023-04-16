@@ -26,7 +26,7 @@ pipeline {
           steps{ 
             script{
               echo "copyin files "
-              sh 'cp -a /var/lib/jenkins/usr/local/app/dist/pfafront-end /var/www/jenkins_test/html/'
+              sh 'cp -a usr/local/app/dist/pfafront-end /var/www/jenkins_test/html/'
           }
           }
         }
