@@ -28,9 +28,9 @@ pipeline {
                 script{
                     echo "building image"
                       withCredentials([usernamePassword(credentialsId: 'docker-hub-repo', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-                      sh 'sudo docker build -t ihebdockerid/app_frontend:2.0 .'
+                      sh 'docker build -t ihebdockerid/app_frontend:2.0 .'
                       sh 'echo $PASS | docker login -u $USER --password-stdin'
-                      sh 'sudo docker push ihebdockerid/app_frontend:2.0' }
+                      sh 'docker push ihebdockerid/app_frontend:2.0' }
             }
         }
          }
