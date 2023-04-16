@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-      node 'NodeJS16.13.0'
+      NodeJS 'NodeJS16.13.0'
      }
       stages{
         stage('init'){
@@ -21,9 +21,13 @@ pipeline {
 
             }
          }
-        stage("Copy") {
+        stage('Copy') {
+          steps{ 
+            script{
               echo "copyin files "
-              sh "cp -a /var/lib/jenkins/usr/local/app/dist/pfafront-end /var/www/jenkins_test/html/"
+              sh 'cp -a /var/lib/jenkins/usr/local/app/dist/pfafront-end /var/www/jenkins_test/html/'
+          }
+          }
         }
          stage('build image'){
             'steps'{
