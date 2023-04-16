@@ -12,8 +12,9 @@ pipeline {
          stage('Install node modules'){
             steps{
                 script{
-                  echo "Installing node modules..."
+                  echo "Installing node modules and building..."
                   sh 'npm install'
+                  sh 'npm run build'
                 }
 
             }
