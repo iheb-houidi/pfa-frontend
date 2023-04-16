@@ -22,14 +22,7 @@ pipeline {
 
             }
          }
-        stage('Copy') {
-          steps{ 
-            script{
-              echo "copyin files "
-              sh 'cp -a usr/local/app/dist/pfafront-end /var/www/jenkins_test/html/'
-          }
-          }
-        }
+       
          stage('build image'){
             'steps'{
                 script{
